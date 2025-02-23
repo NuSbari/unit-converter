@@ -1,0 +1,169 @@
+/* 🌑 Impostazioni generali */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #273549;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* 📌 Contenitore principale */
+
+#main-cont {
+    width: 90%;
+    max-width: 550px;
+    background-color: #1F2937;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    padding-bottom: 20px;
+    overflow: hidden;
+    /* Evita sbordamenti */
+}
+
+
+/* 📌 Box superiore - OCCUPA TUTTA LA LARGHEZZA */
+
+#text-box-cont {
+    width: 100%;
+    background-color: #6943FF;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+    box-sizing: border-box;
+    /* Evita problemi di larghezza */
+}
+
+
+/* 📌 Input */
+
+#input-el {
+    width: 117px;
+    height: 83px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #6943FF;
+    /* Fissa il colore di sfondo */
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    /* Assicura che il testo sia visibile */
+    outline: none;
+    /* Rimuove il bordo di focus */
+    -webkit-appearance: none;
+    /* Evita stili di default su Safari */
+}
+
+
+/* Mantiene lo sfondo anche quando è in focus */
+
+#input-el:focus {
+    background-color: #6943FF;
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* 📌 Pulsante */
+
+#convert-btn {
+    background-color: white;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: black;
+    width: 120px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Effetto hover */
+
+#convert-btn:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+
+/* Effetto click */
+
+#convert-btn:active {
+    background-color: #ccc;
+    transform: scale(0.95);
+}
+
+
+/* 📌 Sezione conversioni */
+
+#converted-unit-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+/* 📌 Box conversione */
+
+#meters-el,
+#volume-el,
+#mass-el {
+    background-color: #273549;
+    width: 90%;
+    max-width: 500px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+    color: #CCC1FF;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+
+/* 📌 Testo */
+
+p {
+    color: white;
+}
+
+
+/* 📱 Responsive */
+
+@media (max-width: 480px) {
+    #main-cont {
+        width: 95%;
+        padding-bottom: 15px;
+    }
+    #input-el {
+        width: 100px;
+        height: 75px;
+        font-size: 3rem;
+    }
+    #convert-btn {
+        width: 100px;
+    }
+    #meters-el,
+    #volume-el,
+    #mass-el {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
